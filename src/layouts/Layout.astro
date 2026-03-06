@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  fonts?: string;
+}
+const { title, description = 'Shermaine — researcher, athlete, creator.', fonts = '' } = Astro.props;
+const baseFont = 'family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300';
+const monoFont = 'family=IBM+Plex+Mono:wght@400;500';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href={`https://fonts.googleapis.com/css2?${baseFont}&${monoFont}${fonts}&display=swap`} rel="stylesheet" />
+
+</head>
+<body class="bg-white text-ink font-sans antialiased">
+  <slot />
+  <script>
+    // Subtle fade-in on scroll — used across all pages
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

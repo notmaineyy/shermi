@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #FAE8EB; }
+::-webkit-scrollbar-thumb { background: #D4849A; border-radius: 10px; }
+
+/* Subtle fade-in only — no movement */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.fade-in.visible { opacity: 1; }
+
+/* Photo placeholder */
+.photo-slot {
+  background: #FAE8EB;
+  border: 2px dashed #D4849A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #D4849A;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.photo-slot svg { opacity: 0.5; }

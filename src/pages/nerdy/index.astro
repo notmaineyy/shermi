@@ -1,0 +1,205 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="shermaine — work" description="academic portfolio — research, publications, and work.">
+
+  <header class="border-b border-line bg-white sticky top-0 z-50">
+    <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-serif text-lg text-ink hover:text-pink-deep transition-colors">shermaine</a>
+      <nav class="flex items-center gap-6">
+        <a href="/" class="acad-nav">home</a>
+        <a href="/life" class="acad-nav">life</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6">
+
+    <section class="py-16 grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-10 items-start border-b border-line">
+
+      <div class="fade-in">
+        <img 
+          src="/photo/grad1.jpg" 
+          alt="Shermaine Ang" 
+          class="w-full aspect-square rounded-lg object-cover shadow-[0_4px_20px_rgba(242,196,206,0.3)] border border-pink-soft"
+        />
+      </div>
+
+      <div class="fade-in">
+        <h1 class="font-serif text-[2.6rem] leading-tight mb-1">shermaine ang</h1>
+        <p class="text-ink-mid text-sm mb-1">engineer · researcher</p>
+        <p class="text-ink-light text-sm mb-6">singapore · imperial college london alumni</p>
+        <p class="text-ink-mid leading-relaxed text-[0.95rem] mb-4">
+          i am currently working as an engineer while continuing to pursue my research interests in <strong>computer vision</strong>.
+        </p>
+        <p class="text-ink-mid leading-relaxed text-[0.95rem] mb-6">
+          i hold an MSc in computing (specialising in AI & ML) and a BEng in electronic and information engineering, both from imperial college london. 
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+          <a href="/cv.pdf"  class="acad-chip acad-chip-pink" target="_blank" rel="noopener">my cv</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 border-b border-line fade-in">
+      <h2 class="acad-section-title">research interests</h2>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="interest-tag">computer vision</span>
+        <span class="interest-tag">machine learning</span>
+        <span class="interest-tag">data augmentation</span>
+      </div>
+    </section>
+
+    <section id="research" class="py-12 border-b border-line">
+      <h2 class="acad-section-title fade-in">research</h2>
+
+      <div class="space-y-8 mt-6">
+
+        <div class="research-row fade-in">
+          <div class="research-year">2024-25</div>
+          <div>
+            <h3 class="font-serif text-xl mb-1 leading-snug">Image Compositing is All You Need for Data Augmentation</h3>
+            <p class="text-xs text-ink-light italic mb-2">
+              <em>VISAPP 2025</em> · 19th International Conference on Computer Vision Theory and Applications
+            </p>
+            <p class="text-ink-mid text-[0.92rem] leading-relaxed mb-3">
+              Investigated the efficacy of image compositing as a primary method for data augmentation in computer vision tasks. This research demonstrates how compositing can generate highly diverse and robust training data, challenging the necessity of more computationally expensive or complex augmentation pipelines.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <span class="method-tag">Data Augmentation</span>
+            </div>
+
+            <div class="flex gap-3">
+              <a href="https://arxiv.org/abs/2502.13936" target="_blank" class="pub-link">arXiv</a>
+              <a href="https://github.com/notmaineyy" class="pub-link shrink-0" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-row fade-in">
+          <div class="research-year">2018</div>
+          <div>
+            <h3 class="font-serif text-xl mb-1 leading-snug">Investigation of Low Cost Eye Tracker and EEG for Objectively Assessing Vigilance Level</h3>
+            <p class="text-xs text-ink-light italic mb-2">
+              <em>IRC-SET 2018</em> (pp. 63-74)
+            </p>
+            <p class="text-ink-mid text-[0.92rem] leading-relaxed mb-3">
+              Explored the viability of combining low-cost eye-tracking hardware with EEG signals to create an objective, accessible method for assessing human vigilance and cognitive states.
+            </p>
+            <div class="flex gap-3 flex-wrap">
+              <span class="method-tag">Eye Tracking</span>
+              <span class="method-tag">EEG</span>
+            </div>
+            <div class="flex gap-3 mt-3">
+              <a href="https://www.researchgate.net/publication/336928778_Investigation_of_Low_Cost_Eye_Tracker_and_EEG_for_Objectively_Assessing_Vigilance_Level" target="_blank" class="pub-link">ResearchGate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="others" class="py-12 border-b border-line">
+      <h2 class="acad-section-title fade-in">others</h2>
+      <div class="space-y-4 mt-6">
+        <div class="talk-row fade-in">
+          <div class="talk-year">2024</div>
+          <div>
+            <p class="text-ink font-medium leading-snug">my imperial story</p>
+            <p class="text-sm text-ink-light">imperial college london · featured alumni story</p>
+          </div>
+          <a href="https://www.imperial.ac.uk/Stories/my-imperial-story-shermaine/" target="_blank" rel="noopener" class="pub-link shrink-0 self-start mt-0.5">Read →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12">
+      <h2 class="acad-section-title fade-in">contact</h2>
+      <div class="mt-4 fade-in space-y-1 text-[0.92rem] text-ink-mid">
+        <p>📧 <a href="mailto:shermaineang2802@email.com" class="hover:text-pink-deep transition-colors">shermaineang2802@email.com</a></p>
+        <p>📍 singapore</p>
+        <p class="pt-2">
+           <a href="https://github.com/notmaineyy" class="hover:text-pink-deep transition-colors" target="_blank" rel="noopener">github</a>
+           &nbsp;·&nbsp;
+           <a href="https://linkedin.com/in/shermaine-ajn" class="hover:text-pink-deep transition-colors" target="_blank" rel="noopener">linkedin</a>
+           &nbsp;·&nbsp;
+           <a href="https://scholar.google.com/citations?user=JLjkbPMAAAAJ&hl=en" class="hover:text-pink-deep transition-colors" target="_blank" rel="noopener">google scholar</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-line py-5 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <span class="text-xs text-ink-light">© 2026 Shermaine Ang</span>
+      <div class="flex gap-5">
+        <a href="/" class="text-xs text-ink-light hover:text-pink-deep transition-colors">← Back to home</a>
+        <a href="/life" class="text-xs text-ink-light hover:text-pink-deep transition-colors">The Life →</a>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  .acad-nav {
+    @apply text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors;
+  }
+  .acad-section-title {
+    @apply font-serif text-2xl text-ink;
+  }
+  .acad-chip {
+    @apply text-xs tracking-wide font-medium px-3 py-1
+           border border-line rounded-full text-ink-mid
+           hover:border-pink hover:bg-pink-soft transition-colors no-underline;
+  }
+  .acad-chip-pink {
+    @apply bg-pink-soft border-pink text-ink hover:bg-pink hover:border-pink;
+  }
+  .interest-tag {
+    @apply text-xs font-medium px-3 py-1 bg-pink-soft border border-pink rounded-full text-ink-mid;
+  }
+  .method-tag {
+    @apply text-[0.65rem] tracking-wide uppercase font-medium px-2.5 py-0.5
+           bg-off-white border border-line rounded-full text-ink-light;
+  }
+  .research-row {
+    @apply grid grid-cols-[56px_1fr] gap-6 pb-8 border-b border-line last:border-0 last:pb-0;
+  }
+  .research-year {
+    @apply font-mono text-xs text-ink-light pt-1.5;
+  }
+  .pub-row {
+    @apply flex gap-6 py-5 border-b border-line last:border-0;
+  }
+  .pub-year {
+    @apply font-mono text-xs text-ink-light pt-0.5 w-12 shrink-0;
+  }
+  .pub-link {
+    @apply text-xs font-medium text-pink-deep
+           hover:underline transition-colors no-underline;
+  }
+  .talk-row {
+    @apply flex items-start gap-6 py-4 border-b border-line last:border-0;
+  }
+  .talk-year {
+    @apply font-mono text-xs text-ink-light pt-0.5 w-12 shrink-0;
+  }
+  .code-row {
+    @apply flex items-start gap-4 py-4 border-b border-line last:border-0;
+  }
+</style>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector((a as HTMLAnchorElement).getAttribute('href')!);
+      if (!t) return; e.preventDefault();
+      window.scrollTo({ top: (t as HTMLElement).offsetTop - 56, behavior: 'smooth' });
+    });
+  });
+</script>

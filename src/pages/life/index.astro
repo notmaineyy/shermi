@@ -1,0 +1,108 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout title="shermi — life" description="running, climbing, dancing, travel.">
+
+  <header class="border-b border-line bg-white sticky top-0 z-50">
+    <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-serif text-lg text-ink hover:text-pink-deep transition-colors">shermi</a>
+      <nav class="flex items-center gap-6">
+        <a href="/" class="life-nav">home</a>
+        <a href="/nerdy" class="life-nav">work</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-6 py-16">
+
+    <div class="mb-14 text-center fade-in">
+      <h1 class="font-serif text-[clamp(2.5rem,6vw,4rem)] leading-none mb-3 text-ink">
+        my life
+      </h1>
+      <p class="text-ink-light text-sm tracking-widest lowercase font-medium mb-6">
+        everything outside the office.
+      </p>
+      
+      <div class="flex justify-center gap-3">
+        <a href="https://www.tiktok.com/@sshermii" target="_blank" rel="noopener" class="life-pill">tiktok ↗</a>
+        <a href="https://www.instagram.com/sshermii" target="_blank" rel="noopener" class="life-pill">instagram ↗</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in max-w-xl mx-auto">
+
+      <div class="group flex flex-col items-center text-center">
+        <img 
+          src="/photo/run.JPG" 
+          alt="run" 
+          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-line transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
+        />
+        <h2 class="font-serif text-2xl text-ink mb-1 lowercase">running</h2>
+        <div class="text-[0.8rem] text-ink-light tracking-wide flex flex-col gap-1">
+          <span>training for: 2xu half</span>
+          <span>1 x FM | 2 x HM</span>
+        </div>
+      </div>
+
+      <div class="group flex flex-col items-center text-center">
+        <img 
+          src="/photo/climb.jpg" 
+          alt="climbing" 
+          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-line transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
+        />
+        <h2 class="font-serif text-2xl text-ink mb-1 lowercase">climbing</h2>
+        <div class="text-[0.8rem] text-ink-light tracking-wide flex flex-col gap-1">
+          <span>just having fun</span>
+        </div>
+      </div>
+
+      <div class="group flex flex-col items-center text-center">
+        <img 
+          src="/photo/dance.jpg" 
+          alt="dance" 
+          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-line transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
+        />
+        <h2 class="font-serif text-2xl text-ink mb-1 lowercase">dancing</h2>
+        <div class="text-[0.8rem] text-ink-light tracking-wide flex flex-col gap-1">
+          <span>ballet, contemp, lyrical, chinese dance</span>
+          <span>currently exploring new genres</span>
+        </div>
+      </div>
+
+      <div class="group flex flex-col items-center text-center">
+        <img 
+          src="/photo/travel.JPG" 
+          alt="travel" 
+          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-line transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
+        />
+        <h2 class="font-serif text-2xl text-ink mb-1 lowercase">travel</h2>
+        <div class="text-[0.8rem] text-ink-light tracking-wide flex flex-col gap-1">
+          <span>41 countries and counting</span>
+          <span>where to next?</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="border-t border-line py-8 px-6 mt-10">
+    <div class="max-w-3xl mx-auto flex flex-col justify-center items-center gap-2">
+      <span class="text-xs text-ink-light tracking-widest uppercase">© 2026 Shermaine Ang</span>
+    </div>
+  </footer>
+
+</Layout>
+
+<style>
+  .life-nav {
+    @apply text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors;
+  }
+  .life-pill {
+    @apply text-[0.7rem] tracking-widest uppercase font-medium px-4 py-2
+           bg-white border border-line rounded-full text-ink
+           hover:border-pink-deep hover:text-pink-deep hover:bg-pink-soft/30 
+           transition-all duration-300 no-underline;
+  }
+</style>

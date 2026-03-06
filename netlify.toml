@@ -1,9 +1,9 @@
 [[redirects]]
-  from   = "https://nerdy.shermi.dev/*"
+  from   = "https://nerdy.shermaineang.com/*"
   to     = "/nerdy/:splat"
   status = 200
 
 [[redirects]]
-  from   = "https://life.shermi.dev/*"
+  from   = "https://life.shermaineang.com/*"
   to     = "/life/:splat"
   status = 200

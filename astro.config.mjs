@@ -3,5 +3,5 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://shermi.dev', // ✏️ update with your domain
+  site: 'https://shermaineang.com', // ✏️ update with your domain
 });

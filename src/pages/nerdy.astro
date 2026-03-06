@@ -7,8 +7,10 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="/" class="font-serif text-lg text-ink hover:text-pink-deep transition-colors">shermaine</a>
       <nav class="flex items-center gap-6">
-        <a href="/" class="acad-nav">home</a>
-        <a href="/life" class="acad-nav">life</a>
+        <a href="/" class="text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors">home</a>
+        <a href="/life" class="text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors">life</a>
       </nav>
     </div>
   </header>
@@ -37,27 +39,29 @@ import Layout from '../layouts/Layout.astro';
         </p>
 
         <div class="flex flex-wrap gap-2">
-          <a href="/cv.pdf"  class="acad-chip acad-chip-pink" target="_blank" rel="noopener">my cv</a>
+          <a href="/cv.pdf"  class="text-xs tracking-wide font-medium px-3 py-1
+           border border-line rounded-full text-ink-mid
+           hover:border-pink hover:bg-pink-soft transition-colors no-underline bg-pink-soft border-pink text-ink hover:bg-pink hover:border-pink" target="_blank" rel="noopener">my cv</a>
         </div>
       </div>
     </section>
 
     <section class="py-12 border-b border-line fade-in">
-      <h2 class="acad-section-title">research interests</h2>
+      <h2 class="font-serif text-2xl text-ink">research interests</h2>
       <div class="flex flex-wrap gap-2 mt-4">
-        <span class="interest-tag">computer vision</span>
-        <span class="interest-tag">machine learning</span>
-        <span class="interest-tag">data augmentation</span>
+        <span class="text-xs font-medium px-3 py-1 bg-pink-soft border border-pink rounded-full text-ink-mid">computer vision</span>
+        <span class="text-xs font-medium px-3 py-1 bg-pink-soft border border-pink rounded-full text-ink-mid">machine learning</span>
+        <span class="text-xs font-medium px-3 py-1 bg-pink-soft border border-pink rounded-full text-ink-mid">data augmentation</span>
       </div>
     </section>
 
     <section id="research" class="py-12 border-b border-line">
-      <h2 class="acad-section-title fade-in">research</h2>
+      <h2 class="font-serif text-2xl text-ink fade-in">research</h2>
 
       <div class="space-y-8 mt-6">
 
-        <div class="research-row fade-in">
-          <div class="research-year">2024-25</div>
+        <div class="grid grid-cols-[56px_1fr] gap-6 pb-8 border-b border-line last:border-0 last:pb-0 fade-in">
+          <div class="font-mono text-xs text-ink-light pt-1.5">2024-25</div>
           <div>
             <h3 class="font-serif text-xl mb-1 leading-snug">Image Compositing is All You Need for Data Augmentation</h3>
             <p class="text-xs text-ink-light italic mb-2">
@@ -67,18 +71,21 @@ import Layout from '../layouts/Layout.astro';
               Investigated the efficacy of image compositing as a primary method for data augmentation in computer vision tasks. This research demonstrates how compositing can generate highly diverse and robust training data, challenging the necessity of more computationally expensive or complex augmentation pipelines.
             </p>
             <div class="flex gap-3 flex-wrap">
-              <span class="method-tag">Data Augmentation</span>
+              <span class="text-[0.65rem] tracking-wide uppercase font-medium px-2.5 py-0.5
+           bg-off-white border border-line rounded-full text-ink-light">Data Augmentation</span>
             </div>
 
             <div class="flex gap-3">
-              <a href="https://arxiv.org/abs/2502.13936" target="_blank" class="pub-link">arXiv</a>
-              <a href="https://github.com/notmaineyy" class="pub-link shrink-0" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://arxiv.org/abs/2502.13936" target="_blank" class="text-xs font-medium text-pink-deep
+           hover:underline transition-colors no-underline">arXiv</a>
+              <a href="https://github.com/notmaineyy" class="text-xs font-medium text-pink-deep
+           hover:underline transition-colors no-underline shrink-0" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </div>
 
-        <div class="research-row fade-in">
-          <div class="research-year">2018</div>
+        <div class="grid grid-cols-[56px_1fr] gap-6 pb-8 border-b border-line last:border-0 last:pb-0 fade-in">
+          <div class="font-mono text-xs text-ink-light pt-1.5">2018</div>
           <div>
             <h3 class="font-serif text-xl mb-1 leading-snug">Investigation of Low Cost Eye Tracker and EEG for Objectively Assessing Vigilance Level</h3>
             <p class="text-xs text-ink-light italic mb-2">
@@ -88,11 +95,14 @@ import Layout from '../layouts/Layout.astro';
               Explored the viability of combining low-cost eye-tracking hardware with EEG signals to create an objective, accessible method for assessing human vigilance and cognitive states.
             </p>
             <div class="flex gap-3 flex-wrap">
-              <span class="method-tag">Eye Tracking</span>
-              <span class="method-tag">EEG</span>
+              <span class="text-[0.65rem] tracking-wide uppercase font-medium px-2.5 py-0.5
+           bg-off-white border border-line rounded-full text-ink-light">Eye Tracking</span>
+              <span class="text-[0.65rem] tracking-wide uppercase font-medium px-2.5 py-0.5
+           bg-off-white border border-line rounded-full text-ink-light">EEG</span>
             </div>
             <div class="flex gap-3 mt-3">
-              <a href="https://www.researchgate.net/publication/336928778_Investigation_of_Low_Cost_Eye_Tracker_and_EEG_for_Objectively_Assessing_Vigilance_Level" target="_blank" class="pub-link">ResearchGate</a>
+              <a href="https://www.researchgate.net/publication/336928778_Investigation_of_Low_Cost_Eye_Tracker_and_EEG_for_Objectively_Assessing_Vigilance_Level" target="_blank" class="text-xs font-medium text-pink-deep
+           hover:underline transition-colors no-underline">ResearchGate</a>
             </div>
           </div>
         </div>
@@ -101,21 +111,22 @@ import Layout from '../layouts/Layout.astro';
     </section>
 
     <section id="others" class="py-12 border-b border-line">
-      <h2 class="acad-section-title fade-in">others</h2>
+      <h2 class="font-serif text-2xl text-ink fade-in">others</h2>
       <div class="space-y-4 mt-6">
-        <div class="talk-row fade-in">
-          <div class="talk-year">2024</div>
+        <div class="flex items-start gap-6 py-4 border-b border-line last:border-0 fade-in">
+          <div class="font-mono text-xs text-ink-light pt-0.5 w-12 shrink-0">2024</div>
           <div>
             <p class="text-ink font-medium leading-snug">my imperial story</p>
             <p class="text-sm text-ink-light">imperial college london · featured alumni story</p>
           </div>
-          <a href="https://www.imperial.ac.uk/Stories/my-imperial-story-shermaine/" target="_blank" rel="noopener" class="pub-link shrink-0 self-start mt-0.5">Read →</a>
+          <a href="https://www.imperial.ac.uk/Stories/my-imperial-story-shermaine/" target="_blank" rel="noopener" class="text-xs font-medium text-pink-deep
+           hover:underline transition-colors no-underline shrink-0 self-start mt-0.5">Read →</a>
         </div>
       </div>
     </section>
 
     <section id="contact" class="py-12">
-      <h2 class="acad-section-title fade-in">contact</h2>
+      <h2 class="font-serif text-2xl text-ink fade-in">contact</h2>
       <div class="mt-4 fade-in space-y-1 text-[0.92rem] text-ink-mid">
         <p>📧 <a href="mailto:shermaineang2802@email.com" class="hover:text-pink-deep transition-colors">shermaineang2802@email.com</a></p>
         <p>📍 singapore</p>
@@ -142,56 +153,6 @@ import Layout from '../layouts/Layout.astro';
   </footer>
 
 </Layout>
-
-<style>
-  .acad-nav {
-    @apply text-xs tracking-widest uppercase font-medium text-ink-light
-           hover:text-pink-deep transition-colors;
-  }
-  .acad-section-title {
-    @apply font-serif text-2xl text-ink;
-  }
-  .acad-chip {
-    @apply text-xs tracking-wide font-medium px-3 py-1
-           border border-line rounded-full text-ink-mid
-           hover:border-pink hover:bg-pink-soft transition-colors no-underline;
-  }
-  .acad-chip-pink {
-    @apply bg-pink-soft border-pink text-ink hover:bg-pink hover:border-pink;
-  }
-  .interest-tag {
-    @apply text-xs font-medium px-3 py-1 bg-pink-soft border border-pink rounded-full text-ink-mid;
-  }
-  .method-tag {
-    @apply text-[0.65rem] tracking-wide uppercase font-medium px-2.5 py-0.5
-           bg-off-white border border-line rounded-full text-ink-light;
-  }
-  .research-row {
-    @apply grid grid-cols-[56px_1fr] gap-6 pb-8 border-b border-line last:border-0 last:pb-0;
-  }
-  .research-year {
-    @apply font-mono text-xs text-ink-light pt-1.5;
-  }
-  .pub-row {
-    @apply flex gap-6 py-5 border-b border-line last:border-0;
-  }
-  .pub-year {
-    @apply font-mono text-xs text-ink-light pt-0.5 w-12 shrink-0;
-  }
-  .pub-link {
-    @apply text-xs font-medium text-pink-deep
-           hover:underline transition-colors no-underline;
-  }
-  .talk-row {
-    @apply flex items-start gap-6 py-4 border-b border-line last:border-0;
-  }
-  .talk-year {
-    @apply font-mono text-xs text-ink-light pt-0.5 w-12 shrink-0;
-  }
-  .code-row {
-    @apply flex items-start gap-4 py-4 border-b border-line last:border-0;
-  }
-</style>
 
 <script>
   // Smooth scroll for anchor links

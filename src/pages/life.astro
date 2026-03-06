@@ -7,8 +7,10 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
       <a href="/" class="font-serif text-lg text-ink hover:text-pink-deep transition-colors">shermi</a>
       <nav class="flex items-center gap-6">
-        <a href="/" class="life-nav">home</a>
-        <a href="/nerdy" class="life-nav">work</a>
+        <a href="/" class="text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors">home</a>
+        <a href="/nerdy" class="text-xs tracking-widest uppercase font-medium text-ink-light
+           hover:text-pink-deep transition-colors">work</a>
       </nav>
     </div>
   </header>
@@ -24,8 +26,14 @@ import Layout from '../layouts/Layout.astro';
       </p>
       
       <div class="flex justify-center gap-3">
-        <a href="https://www.tiktok.com/@sshermii" target="_blank" rel="noopener" class="life-pill">tiktok ↗</a>
-        <a href="https://www.instagram.com/sshermii" target="_blank" rel="noopener" class="life-pill">instagram ↗</a>
+        <a href="https://www.tiktok.com/@sshermii" target="_blank" rel="noopener" class="text-[0.7rem] tracking-widest uppercase font-medium px-4 py-2
+           bg-white border border-line rounded-full text-ink
+           hover:border-pink-deep hover:text-pink-deep hover:bg-pink-soft/30 
+           transition-all duration-300 no-underline">tiktok ↗</a>
+        <a href="https://www.instagram.com/sshermii" target="_blank" rel="noopener" class="text-[0.7rem] tracking-widest uppercase font-medium px-4 py-2
+           bg-white border border-line rounded-full text-ink
+           hover:border-pink-deep hover:text-pink-deep hover:bg-pink-soft/30 
+           transition-all duration-300 no-underline">instagram ↗</a>
       </div>
     </div>
 
@@ -93,16 +101,3 @@ import Layout from '../layouts/Layout.astro';
   </footer>
 
 </Layout>
-
-<style>
-  .life-nav {
-    @apply text-xs tracking-widest uppercase font-medium text-ink-light
-           hover:text-pink-deep transition-colors;
-  }
-  .life-pill {
-    @apply text-[0.7rem] tracking-widest uppercase font-medium px-4 py-2
-           bg-white border border-line rounded-full text-ink
-           hover:border-pink-deep hover:text-pink-deep hover:bg-pink-soft/30 
-           transition-all duration-300 no-underline;
-  }
-</style>

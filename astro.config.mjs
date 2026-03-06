@@ -3,5 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   integrations: [tailwindcss()],
-  site: 'https://shermaineang.com', // ✏️ update with your domain
+  site: 'https://shermaineang.com',
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

@@ -24,7 +24,7 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-slate-500 text-sm tracking-widest lowercase font-medium mb-6">
         everything outside the office.
       </p>
-      
+
       <div class="flex justify-center gap-4">
         <a href="https://www.tiktok.com/@sshermii" target="_blank" rel="noopener"
            class="text-slate-400 hover:text-pink-500 transition-colors duration-300">
@@ -41,14 +41,14 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
 
+    <!-- Cards grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 fade-in max-w-xl mx-auto">
 
       <div class="group flex flex-col items-center text-center">
-        <img 
-          src="/photo/run.JPG" 
-          alt="run" 
-          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
-        />
+        <button data-modal="run" class="w-11/12 mx-auto cursor-pointer select-none bg-transparent border-none p-0 block">
+          <img src="/photo/run.JPG" alt="run"
+            class="w-full aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm"/>
+        </button>
         <h2 class="font-serif text-2xl text-slate-900 mb-1 lowercase">running</h2>
         <div class="text-[0.8rem] text-slate-500 tracking-wide flex flex-col gap-1">
           <span>training for: 2xu half</span>
@@ -57,11 +57,10 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="group flex flex-col items-center text-center">
-        <img 
-          src="/photo/climb.jpg" 
-          alt="climbing" 
-          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
-        />
+        <button data-modal="climb" class="w-11/12 mx-auto cursor-pointer select-none bg-transparent border-none p-0 block">
+          <img src="/photo/climb.jpg" alt="climbing"
+            class="w-full aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm"/>
+        </button>
         <h2 class="font-serif text-2xl text-slate-900 mb-1 lowercase">climbing</h2>
         <div class="text-[0.8rem] text-slate-500 tracking-wide flex flex-col gap-1">
           <span>just having fun</span>
@@ -69,11 +68,10 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="group flex flex-col items-center text-center">
-        <img 
-          src="/photo/dance.jpg" 
-          alt="dance" 
-          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
-        />
+        <button data-modal="dance" class="w-11/12 mx-auto cursor-pointer select-none bg-transparent border-none p-0 block">
+          <img src="/photo/dance.jpg" alt="dance"
+            class="w-full aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm"/>
+        </button>
         <h2 class="font-serif text-2xl text-slate-900 mb-1 lowercase">dancing</h2>
         <div class="text-[0.8rem] text-slate-500 tracking-wide flex flex-col gap-1">
           <span>ballet, contemp, lyrical, chinese dance</span>
@@ -82,11 +80,10 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="group flex flex-col items-center text-center">
-        <img 
-          src="/photo/travel.JPG" 
-          alt="travel" 
-          class="w-11/12 aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm mx-auto"
-        />
+        <button data-modal="travel" class="w-11/12 mx-auto cursor-pointer select-none bg-transparent border-none p-0 block">
+          <img src="/photo/travel.JPG" alt="travel"
+            class="w-full aspect-square object-cover rounded-2xl mb-4 border border-slate-200 transition-transform duration-500 group-hover:-translate-y-1 shadow-sm"/>
+        </button>
         <h2 class="font-serif text-2xl text-slate-900 mb-1 lowercase">travel</h2>
         <div class="text-[0.8rem] text-slate-500 tracking-wide flex flex-col gap-1">
           <span>41 countries and counting</span>
@@ -95,7 +92,6 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
     </div>
-
   </main>
 
   <footer class="border-t border-slate-200 py-8 px-6 mt-10">
@@ -104,4 +100,389 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════════
+       MODALS
+  ═══════════════════════════════════════════ -->
+
+  <!-- Backdrop -->
+  <div id="modal-backdrop"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"
+    aria-hidden="true">
+  </div>
+
+  <!-- ── Running ───────────────────────────── -->
+  <div id="modal-run" role="dialog" aria-modal="true" aria-label="Running"
+    class="modal hidden fixed z-50 inset-0 flex items-center justify-center p-4 pointer-events-none">
+    <div class="modal-box bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[88vh] overflow-y-auto
+                opacity-0 translate-y-4 transition-all duration-300 pointer-events-auto">
+      <div class="p-7">
+        <div class="flex items-start justify-between mb-5">
+          <h2 class="font-serif text-3xl text-slate-900 lowercase">running</h2>
+          <button class="modal-close text-slate-400 hover:text-slate-700 transition-colors mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <img src="/photo/run.JPG" alt="running"
+          class="w-full aspect-video object-cover rounded-2xl mb-6 border border-slate-100"/>
+
+        <!-- Best race times -->
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-3">best race times</p>
+        <div class="grid grid-cols-3 gap-2 mb-6">
+          <div class="flex flex-col items-center text-center bg-slate-50 rounded-2xl py-3 px-2">
+            <span class="text-[0.6rem] tracking-widest uppercase text-slate-400 font-medium mb-1">marathon</span>
+            <span class="font-serif text-lg text-slate-900 leading-none">4:55:49</span>
+          </div>
+          <div class="flex flex-col items-center text-center bg-slate-50 rounded-2xl py-3 px-2">
+            <span class="text-[0.6rem] tracking-widest uppercase text-slate-400 font-medium mb-1">half</span>
+            <span class="font-serif text-lg text-slate-900 leading-none">2:26:19</span>
+          </div>
+          <div class="flex flex-col items-center text-center bg-slate-50 rounded-2xl py-3 px-2">
+            <span class="text-[0.6rem] tracking-widest uppercase text-slate-400 font-medium mb-1">10k</span>
+            <span class="font-serif text-lg text-slate-900 leading-none">01:01:43</span>
+          </div>
+        </div>
+
+        <!-- All races -->
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-3">all races</p>
+        <div class="flex flex-col gap-5 mb-6">
+
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[0.6rem] tracking-widest uppercase text-slate-400 font-semibold">2025</span>
+              <div class="flex-1 h-px bg-slate-100"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">cambridge half</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">9 mar</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">regent's park 10k</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">29 mar</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">richmond half</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">13 apr</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">manchester marathon</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">27 apr</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">swiftathon 10k</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">31 may</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">bath half</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">17 aug</span>
+              </div>
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">asics ldnx 10k</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">24 aug</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-[0.6rem] tracking-widest uppercase text-slate-400 font-semibold">2024</span>
+              <div class="flex-1 h-px bg-slate-100"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+              <div class="flex justify-between items-baseline">
+                <span class="text-xs text-slate-700">victoria 10k</span>
+                <span class="text-[0.65rem] text-slate-400 ml-2">9 jun</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-2">training for</p>
+        <p class="text-sm text-slate-600 leading-relaxed">
+          <span class="text-slate-900 font-medium">2xu half</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Climbing ──────────────────────────── -->
+  <div id="modal-climb" role="dialog" aria-modal="true" aria-label="Climbing"
+    class="modal hidden fixed z-50 inset-0 flex items-center justify-center p-4 pointer-events-none">
+    <div class="modal-box bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[88vh] overflow-y-auto
+                opacity-0 translate-y-4 transition-all duration-300 pointer-events-auto">
+      <div class="p-7">
+        <div class="flex items-start justify-between mb-5">
+          <h2 class="font-serif text-3xl text-slate-900 lowercase">climbing</h2>
+          <button class="modal-close text-slate-400 hover:text-slate-700 transition-colors mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Started -->
+        <div class="inline-flex items-center gap-2 bg-pink-50 text-pink-400 rounded-full px-4 py-2 mb-6">
+          <span class="text-xs font-medium tracking-wide">started on 20 aug 2025</span>
+        </div>
+
+        <!-- Current grades -->
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-3">currently a</p>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="bg-slate-50 rounded-2xl p-4 flex flex-col gap-1">
+            <span class="text-xs text-slate-400">bff climb</span>
+            <span class="font-serif text-2xl text-slate-900">7</span>
+            <span class="text-[0.65rem] text-slate-400">out of 14</span>
+          </div>
+          <div class="bg-slate-50 rounded-2xl p-4 flex flex-col gap-1">
+            <span class="text-xs text-slate-400">fitbloc</span>
+            <span class="font-serif text-2xl text-slate-900">3</span>
+            <span class="text-[0.65rem] text-slate-400">bars out of 8</span>
+          </div>
+        </div>
+
+        <!-- Video — 9:16 matches TikTok natively -->
+        <div class="aspect-[9/16] w-full mb-3 rounded-2xl border border-slate-200 overflow-hidden relative">
+          <iframe
+            src="https://www.tiktok.com/embed/v2/7617372025291656470"
+            class="absolute inset-0 w-full h-full"
+            allow="autoplay"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- TikTok link -->
+        <a href="https://www.tiktok.com/@shermiclimbs" target="_blank" rel="noopener"
+           class="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors duration-300 group">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+          </svg>
+          <span class="text-[0.65rem] tracking-wide">more on shermi 🧗🏻‍♀️ <span class="group-hover:underline">@shermiclimbs</span></span>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Dancing ───────────────────────────── -->
+  <div id="modal-dance" role="dialog" aria-modal="true" aria-label="Dancing"
+    class="modal hidden fixed z-50 inset-0 flex items-center justify-center p-4 pointer-events-none">
+    <div class="modal-box bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[88vh] overflow-y-auto
+                opacity-0 translate-y-4 transition-all duration-300 pointer-events-auto">
+      <div class="p-7">
+        <div class="flex items-start justify-between mb-5">
+          <h2 class="font-serif text-3xl text-slate-900 lowercase">dancing</h2>
+          <button class="modal-close text-slate-400 hover:text-slate-700 transition-colors mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+ 
+        <!-- Big stat -->
+        <div class="flex items-end gap-2 mb-1">
+          <span class="font-serif text-6xl text-pink-400 leading-none">21</span>
+          <span class="text-slate-500 text-sm mb-2 leading-snug">years of dancing<br/><span class="text-slate-400 text-xs">and counting</span></span>
+        </div>
+ 
+        <!-- Achievements — subtle -->
+        <p class="text-xs text-slate-400 mb-6">
+          abrsm advanced 1 ballet · grade 10 chinese dance
+        </p>
+ 
+        <!-- Styles -->
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-3">styles</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="text-xs px-3 py-1.5 bg-pink-50 border border-pink-100 rounded-full text-pink-600">ballet</span>
+          <span class="text-xs px-3 py-1.5 bg-pink-50 border border-pink-100 rounded-full text-pink-600">chinese dance</span>
+          <span class="text-xs px-3 py-1.5 bg-pink-50 border border-pink-100 rounded-full text-pink-600">contemporary</span>
+          <span class="text-xs px-3 py-1.5 bg-pink-50 border border-pink-100 rounded-full text-pink-600">lyrical</span>
+        </div>
+ 
+        <!-- Photos placeholder -->
+        <p class="text-[0.7rem] tracking-widest uppercase text-pink-400 font-semibold mb-3">photos</p>
+        <div class="grid grid-cols-3 gap-2">
+          <!-- replace src with your actual dance photos -->
+          <img src="/photo/dance1.jpg" alt="" class="aspect-square object-cover rounded-xl border border-slate-100"/>
+          <img src="/photo/cd.jpg" alt="" class="aspect-square object-cover rounded-xl border border-slate-100"/>
+          <img src="/photo/ballet.jpg" alt="" class="aspect-square object-cover rounded-xl border border-slate-100"/>
+           </div>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ── Travel ────────────────────────────── -->
+  <div id="modal-travel" role="dialog" aria-modal="true" aria-label="Travel"
+    class="modal hidden fixed z-50 inset-0 flex items-center justify-center p-4 pointer-events-none">
+    <div class="modal-box bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[88vh] overflow-y-auto
+                opacity-0 translate-y-4 transition-all duration-300 pointer-events-auto">
+      <div class="p-7">
+        <div class="flex items-start justify-between mb-5">
+          <h2 class="font-serif text-3xl text-slate-900 lowercase">travel</h2>
+          <button class="modal-close text-slate-400 hover:text-slate-700 transition-colors mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+ 
+        <!-- Stat -->
+        <div class="flex items-end gap-2 mb-6">
+          <span class="font-serif text-6xl text-pink-400 leading-none">41</span>
+          <span class="text-slate-500 text-sm mb-2 leading-snug">countries visited<br/><span class="text-slate-400 text-xs">and counting</span></span>
+        </div>
+ 
+        <!-- Countries -->
+        <p class="text-[0.65rem] text-slate-400">full travel page coming soon</p>
+ 
+      </div>
+    </div>
+  </div>
+ 
+  <style>
+    .modal.is-open {
+      pointer-events: auto;
+    }
+    .modal.is-open .modal-box {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #travel-map .leaflet-container { background: #f8fafc; }
+    #travel-map .leaflet-control-zoom,
+    #travel-map .leaflet-control-attribution { display: none; }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+ 
+  <script>
+    const backdrop = document.getElementById('modal-backdrop');
+    const modals   = document.querySelectorAll('.modal');
+ 
+    function openModal(id) {
+      const modal = document.getElementById('modal-' + id);
+      if (!modal) return;
+ 
+      if (id === 'climb') {
+        const iframe = modal.querySelector('iframe');
+        if (iframe && iframe.dataset.src) {
+          iframe.src = iframe.dataset.src;
+        }
+      }
+ 
+      modal.classList.remove('hidden');
+      backdrop.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        backdrop.classList.remove('opacity-0');
+        backdrop.classList.add('opacity-100');
+        modal.classList.add('is-open');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+ 
+    function closeAll() {
+      const climbModal = document.getElementById('modal-climb');
+      if (climbModal && !climbModal.classList.contains('hidden')) {
+        const iframe = climbModal.querySelector('iframe');
+        if (iframe) {
+          if (!iframe.dataset.src) iframe.dataset.src = iframe.src;
+          iframe.src = '';
+        }
+      }
+ 
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0');
+      modals.forEach(m => m.classList.remove('is-open'));
+      document.body.style.overflow = '';
+ 
+      setTimeout(() => {
+        backdrop.classList.add('hidden');
+        modals.forEach(m => m.classList.add('hidden'));
+      }, 300);
+    }
+ 
+    document.querySelectorAll('[data-modal]').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.modal));
+    });
+ 
+    document.querySelectorAll('.modal-close').forEach(btn => {
+      btn.addEventListener('click', closeAll);
+    });
+ 
+    backdrop.addEventListener('click', closeAll);
+    modals.forEach(modal => modal.addEventListener('click', closeAll));
+ 
+    document.querySelectorAll('.modal-box').forEach(box => {
+      box.addEventListener('click', e => e.stopPropagation());
+    });
+ 
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeAll();
+    });
+  </script>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    // Using ISO 3166-1 alpha-3 — reliably present in every GeoJSON feature
+    const VISITED = new Set([
+      'MAR',                          // morocco
+      'CHN', 'HKG',                   // china, hong kong
+      'IDN',                          // indonesia
+      'JPN',                          // japan
+      'MYS',                          // malaysia
+      'SGP',                          // singapore
+      'KOR',                          // south korea
+      'TWN',                          // taiwan
+      'THA',                          // thailand
+      'TUR',                          // turkey
+      'ALB', 'AUT', 'BEL', 'BIH', 'HRV',
+      'CZE', 'DNK', 'FIN', 'FRA', 'DEU',
+      'HUN', 'ISL', 'IRL', 'ITA', 'LIE',
+      'LUX', 'MLT', 'NLD', 'NOR', 'POL',
+      'PRT', 'SVK', 'SVN', 'ESP', 'SWE',
+      'CHE', 'GBR', 'VAT',
+      'USA', 'AUS', 'NZL',
+    ]);
+ 
+    let mapInitialised = false;
+ 
+    function initTravelMap() {
+      if (mapInitialised) return;
+      mapInitialised = true;
+ 
+      const map = L.map('travel-map', {
+        zoomControl: false,
+        attributionControl: false,
+        scrollWheelZoom: false,
+        dragging: false,
+        doubleClickZoom: false,
+        boxZoom: false,
+        keyboard: false,
+      }).setView([20, 10], 1);
+ 
+      fetch('https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson')
+        .then(r => r.json())
+        .then(geo => {
+          L.geoJSON(geo, {
+            style: feature => ({
+              fillColor: VISITED.has(feature.properties.ISO_A3) ? '#f9a8d4' : '#e2e8f0',
+              fillOpacity: 1,
+              color: '#fff',
+              weight: 0.5,
+            }),
+          }).addTo(map);
+        });
+    }
+ 
+    document.querySelector('[data-modal="travel"]')
+      ?.addEventListener('click', () => setTimeout(initTravelMap, 300));
+  </script>
+ 
 </Layout>
